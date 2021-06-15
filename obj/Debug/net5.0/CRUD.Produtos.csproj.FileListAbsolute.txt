@@ -1,0 +1,16 @@
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\CRUD.Produtos.exe
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\CRUD.Produtos.deps.json
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\CRUD.Produtos.runtimeconfig.json
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\CRUD.Produtos.runtimeconfig.dev.json
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\CRUD.Produtos.dll
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\ref\CRUD.Produtos.dll
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\bin\Debug\net5.0\CRUD.Produtos.pdb
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.csprojAssemblyReference.cache
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.AssemblyInfoInputs.cache
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.AssemblyInfo.cs
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.csproj.CoreCompileInputs.cache
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.dll
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\ref\CRUD.Produtos.dll
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.pdb
+C:\Users\Diego\BootcampGFT\ProjetoEntregar\CRUD.Produtos\obj\Debug\net5.0\CRUD.Produtos.genruntimeconfig.cache
