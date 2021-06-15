@@ -6,6 +6,8 @@ namespace CRUD.Produtos
     {
         static void Main(string[] args)
         {
+            Products myObjt = new Products();
+            
             Console.WriteLine("Hello World!");
         }
     }
