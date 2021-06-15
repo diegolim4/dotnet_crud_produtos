@@ -8,7 +8,6 @@ namespace CRUD.Produtos
         private int Price{ get; set;}
 
         // Métodos
-
         public Products(int id, string name, string description, int price)
         {
             this.Id = id;
