@@ -27,5 +27,15 @@ namespace CRUD.Produtos
             show += "Preço: " + this.Price + Environment.NewLine;
             return show;
         }
+
+        //métodos de encapsulamento
+        public string showName()
+        {
+            return this.Name;
+        }
+        public int showId()
+        {
+            return this.Id;
+        }
     }
 }
