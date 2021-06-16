@@ -41,6 +41,10 @@ namespace CRUD.Produtos
         {
             return this.Id;
         }
+        public bool showDeleted()
+        {
+            return this.Deleted;
+        }
         
         public void delete(){
             this.Deleted = true; 

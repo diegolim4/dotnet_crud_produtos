@@ -54,7 +54,13 @@ namespace CRUD.Produtos
             }
             foreach (var products in list)
             {
-                Console.WriteLine("#ID {0}: - {1}", products.showId(), products.showName());
+                var excluido = products.showDeleted();
+                if(!excluido){
+                    Console.WriteLine("#ID {0}: - {1}", products.showId(), products.showName());
+                }
+                
+
+
             }
         }
         private static void InserirProduto()
