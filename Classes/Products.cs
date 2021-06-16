@@ -9,6 +9,8 @@ namespace CRUD.Produtos
         private string Description { get; set; }
         private int Price { get; set; }
 
+        private bool Deleted {get ; set;}
+
         // Métodos
         public Products(int id, string name, string description, int price)
         {
@@ -16,6 +18,7 @@ namespace CRUD.Produtos
             this.Name = name;
             this.Description = description;
             this.Price = price;
+            this.Deleted = false;
         }
 
         // Implementação do to string
@@ -37,5 +40,11 @@ namespace CRUD.Produtos
         {
             return this.Id;
         }
-    }
+        
+        public void delete(){
+            this.Deleted = true; 
+        }
+
+    }   
+
 }
