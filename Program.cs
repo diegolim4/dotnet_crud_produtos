@@ -9,7 +9,7 @@ namespace CRUD.Produtos
         {
             string optionUser = OptionUser();
 
-            while (optionUser.ToUpper() != "x")
+            while (optionUser.ToUpper() != "X")
             {
                 switch (optionUser)
                 {
@@ -30,15 +30,14 @@ namespace CRUD.Produtos
                         break;
                     case "C":
                         Console.Clear();
-                        break;
-
+                        break;  
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
                 optionUser = OptionUser();
             }
-            Console.WriteLine("Pronto! :)");
-            Console.ReadLine();
+            Console.WriteLine("Fui! :)");
+            
         }
 
         private static void ListarProdutos()
@@ -58,9 +57,6 @@ namespace CRUD.Produtos
                 if(!excluido){
                     Console.WriteLine("#ID {0}: - {1}", products.showId(), products.showName());
                 }
-                
-
-
             }
         }
         private static void InserirProduto()
@@ -107,8 +103,17 @@ namespace CRUD.Produtos
         {
             Console.WriteLine("Digite o id do Produto que Deseja Deletar: ");
             int idProducts = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Deseja mesmo excluir o id:{0} ? (S/N)", idProducts);
+            string confirm = Console.ReadLine();            
 
-            repository.Delete(idProducts);
+            if(confirm.ToUpper() == "S"){
+                repository.Delete(idProducts);
+                Console.WriteLine("Produto deletado com sucesso");
+            }else{
+                Console.WriteLine("Produto Não deletado");
+            }
+            
         }
         private static void VisualizarProduto()
         {
