@@ -7,12 +7,12 @@ namespace CRUD.Produtos
         //Atributos
         private string Name { get; set; }
         private string Description { get; set; }
-        private int Price { get; set; }
+        private float Price { get; set; }
 
         private bool Deleted {get ; set;}
 
         // Métodos
-        public Products(int id, string name, string description, int price)
+        public Products(int id, string name, string description, float price)
         {
             this.Id = id;
             this.Name = name;
