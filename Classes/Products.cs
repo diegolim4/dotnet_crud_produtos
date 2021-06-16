@@ -28,6 +28,7 @@ namespace CRUD.Produtos
             show += "Nome: " + this.Name + Environment.NewLine;
             show += "Descrição: " + this.Description + Environment.NewLine;
             show += "Preço: " + this.Price + Environment.NewLine;
+            show += "Deleted" + this.Deleted;
             return show;
         }
 

@@ -23,10 +23,10 @@ namespace CRUD.Produtos
                         AtualizarProduto();
                         break;
                     case "4":
-                        //ExcluirProduto();
+                        ExcluirProduto();
                         break;
                     case "5":
-                        //VisualizarProduto();
+                        VisualizarProduto();
                         break;
                     case "C":
                         Console.Clear();
@@ -49,7 +49,7 @@ namespace CRUD.Produtos
 
             if (list.Count == 0)
             {
-                Console.WriteLine("Nenhum produto cadastrado ainda.");
+                Console.WriteLine("Nenhum Produto Cadastrado Ainda.");
                 return;
             }
             foreach (var products in list)
@@ -78,8 +78,8 @@ namespace CRUD.Produtos
 
         private static void AtualizarProduto()
         {
-            Console.WriteLine("Digite o id do produto que deseja atualizar: ");
-            int idProducts = int.Parse(Console.ReadLine());            
+            Console.WriteLine("Digite o id do Produto que Deseja atualizar: ");
+            int idProducts = int.Parse(Console.ReadLine());
             Console.WriteLine("Atualizar Nome do Produto");
             string insertName = Console.ReadLine();
             Console.WriteLine("Atualizar a Descrição do produto do Produto");
@@ -97,17 +97,34 @@ namespace CRUD.Produtos
 
         }
 
+        private static void ExcluirProduto()
+        {
+            Console.WriteLine("Digite o id do Produto que Deseja Deletar: ");
+            int idProducts = int.Parse(Console.ReadLine());
+
+            repository.Delete(idProducts);
+        }
+        private static void VisualizarProduto()
+        {
+            Console.WriteLine("Digite o id do Produto que Deseja Visualizar: ");
+            int idProducts = int.Parse(Console.ReadLine());
+
+            var produto = repository.ReturnId(idProducts);
+
+            Console.WriteLine(produto);
+        }
+
         private static string OptionUser()
         {
             Console.WriteLine("_________");
-            Console.WriteLine("Informe a opção desejada: ");
+            Console.WriteLine("Informe a Opção Desejada: ");
 
             Console.WriteLine("1 - Listar Produtos");
             Console.WriteLine("2 - Inserir Produto");
             Console.WriteLine("3 - Atualizar produto");
             Console.WriteLine("4 - Excluir Produto");
             Console.WriteLine("5 - Visualizar Produto");
-            Console.WriteLine("C - limpar Tela");
+            Console.WriteLine("C - Limpar Tela");
             Console.WriteLine("X - Sair");
             Console.WriteLine();
 
