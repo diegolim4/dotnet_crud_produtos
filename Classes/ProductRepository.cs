@@ -4,9 +4,10 @@ using CRUD.Produtos.interfaces;
 
 namespace CRUD.Produtos
 {
-    // Colocando o repositório de métodos no repositório de produtos:    
+    // Colocando o repositório de métodos no repositório de produtos    
     public class ProductRepository : IRepository<Products> 
     {
+        private List<Products> listaProdutos = new List<Products>(); //variável que terá a listaprodutos
         public void Delete(int id)
         {
             throw new NotImplementedException();
