@@ -10,32 +10,32 @@ namespace CRUD.Produtos
         private List<Products> listaProdutos = new List<Products>(); //variável que terá a listaprodutos
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            listaProdutos[id].delete() ;
         }
 
         public void Insert(Products entidade)
         {
-            throw new NotImplementedException();
+            listaProdutos.Add(entidade);
         }
 
         public List<Products> List()
         {
-            throw new NotImplementedException();
+            return listaProdutos;
         }
 
         public int NextId()
         {
-            throw new NotImplementedException();
+            return listaProdutos.Count;
         }
 
         public Products ReturnId(int id)
         {
-            throw new NotImplementedException();
+            return listaProdutos[id];
         }
 
         public void Update(int id, Products entidade)
         {
-            throw new NotImplementedException();
+            listaProdutos[id] = entidade;
         }
     }
 }
