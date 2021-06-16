@@ -20,7 +20,7 @@ namespace CRUD.Produtos
                         InserirProduto();
                         break;
                     case "3":
-                        //AtualizarProduto();
+                        AtualizarProduto();
                         break;
                     case "4":
                         //ExcluirProduto();
@@ -49,7 +49,7 @@ namespace CRUD.Produtos
 
             if (list.Count == 0)
             {
-                Console.WriteLine("Nenhuma série cadastrada.");
+                Console.WriteLine("Nenhum produto cadastrado ainda.");
                 return;
             }
             foreach (var products in list)
@@ -72,8 +72,29 @@ namespace CRUD.Produtos
                 name: insertName,
                 description: insertDescription,
                 price: insertPrice);
-            
-            repository.Insert(newProducts);    
+
+            repository.Insert(newProducts);
+        }
+
+        private static void AtualizarProduto()
+        {
+            Console.WriteLine("Digite o id do produto que deseja atualizar: ");
+            int idProducts = int.Parse(Console.ReadLine());            
+            Console.WriteLine("Atualizar Nome do Produto");
+            string insertName = Console.ReadLine();
+            Console.WriteLine("Atualizar a Descrição do produto do Produto");
+            string insertDescription = Console.ReadLine();
+            Console.WriteLine("Atualizar o Preço do Produto");
+            float insertPrice = float.Parse(Console.ReadLine());
+
+            Products updateProducts = new Products(
+                id: idProducts,
+                name: insertName,
+                description: insertDescription,
+                price: insertPrice);
+
+            repository.Update(idProducts, updateProducts);
+
         }
 
         private static string OptionUser()
