@@ -4,11 +4,95 @@ namespace CRUD.Produtos
 {
     class Program
     {
+        static ProductRepository repository = new ProductRepository();
         static void Main(string[] args)
         {
-            Products myObjt = new Products();
+            string optionUser = OptionUser();
+
+            while (optionUser.ToUpper() != "x")
+            {
+                switch (optionUser)
+                {
+                    case "1":
+                        ListarProdutos();
+                        break;
+                    case "2":
+                        InserirProduto();
+                        break;
+                    case "3":
+                        //AtualizarProduto();
+                        break;
+                    case "4":
+                        //ExcluirProduto();
+                        break;
+                    case "5":
+                        //VisualizarProduto();
+                        break;
+                    case "C":
+                        Console.Clear();
+                        break;
+
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+                optionUser = OptionUser();
+            }
+            Console.WriteLine("Pronto! :)");
+            Console.ReadLine();
+        }
+
+        private static void ListarProdutos()
+        {
+            Console.WriteLine("Lista dos Produtos");
+
+            var list = repository.List();
+
+            if (list.Count == 0)
+            {
+                Console.WriteLine("Nenhuma série cadastrada.");
+                return;
+            }
+            foreach (var products in list)
+            {
+                Console.WriteLine("#ID {0}: - {1}", products.showId(), products.showName());
+            }
+        }
+        private static void InserirProduto()
+        {
+            Console.WriteLine("Inserir Novo Produto");
+            Console.WriteLine("Nome do Produto");
+            string insertName = Console.ReadLine();
+            Console.WriteLine("Descreva o Produto");
+            string insertDescription = Console.ReadLine();
+            Console.WriteLine("Preço do Produto");
+            float insertPrice = float.Parse(Console.ReadLine());
+
+            Products newProducts = new Products(
+                id: repository.NextId(),
+                name: insertName,
+                description: insertDescription,
+                price: insertPrice);
             
-            Console.WriteLine("Hello World!");
+            repository.Insert(newProducts);    
+        }
+
+        private static string OptionUser()
+        {
+            Console.WriteLine("_________");
+            Console.WriteLine("Informe a opção desejada: ");
+
+            Console.WriteLine("1 - Listar Produtos");
+            Console.WriteLine("2 - Inserir Produto");
+            Console.WriteLine("3 - Atualizar produto");
+            Console.WriteLine("4 - Excluir Produto");
+            Console.WriteLine("5 - Visualizar Produto");
+            Console.WriteLine("C - limpar Tela");
+            Console.WriteLine("X - Sair");
+            Console.WriteLine();
+
+            string optionUser = Console.ReadLine().ToUpper();
+            Console.WriteLine();
+            return optionUser;
         }
     }
 }
